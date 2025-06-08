@@ -1,0 +1,52 @@
+/* Existing CSS (from previous conversations) */
+
+.image-card-clickable-container {
+    position: relative;
+    cursor: pointer; /* Indicate it's clickable */
+    border: 2px solid transparent; /* Default transparent border */
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transitions */
+}
+
+.image-card-clickable-container.voted {
+    border-color: gold; /* Gold border when voted */
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.7); /* Optional: add a glow */
+}
+
+.vote-count-overlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 10px;
+    border-top-left-radius: 5px;
+    font-size: 0.9em;
+    z-index: 10; /* Ensure it's above the image */
+}
+
+/* NEW CSS for Member Status Banner */
+.member-voted {
+    background-color: #d4edda; /* Light green */
+    color: #155724; /* Dark green text */
+    border-color: #c3e6cb;
+    font-weight: bold;
+}
+
+.member-not-voted {
+    background-color: #e2e3e5; /* Light grey */
+    color: #495057; /* Dark grey text */
+    border-color: #d6d8db;
+}
+
+/* Optional: Make the banner items look nicer */
+.list-group-horizontal-sm .list-group-item {
+    margin-right: 5px; /* Spacing between names */
+    margin-bottom: 5px; /* For wrapping on smaller screens */
+    flex: 0 0 auto; /* Don't stretch items */
+}
+
+/* Optional: Style for the winner image */
+.winner-image img {
+    max-width: 100%;
+    height: auto;
+}
